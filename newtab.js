@@ -127,13 +127,13 @@ function renderTopSites(sites) {
 // Fallback sites (used when no Chrome API or empty)
 const FALLBACK_SITES = [
   { title: 'Gmail', url: 'https://mail.google.com' },
+  { title: 'Linkedin', url: 'https://www.linkedin.com/in/shekhar-naik7/' },
   { title: 'Upgrad', url: 'https://www.upgrad.com/lxp/learner' },
   { title: 'Crunchyroll', url: 'https://www.crunchyroll.com' },
   { title: 'YouTube', url: 'https://youtube.com' },
   { title: 'GitHub', url: 'https://github.com/Shekhar-N' },
   { title: 'ChatGPT', url: 'https://chat.openai.com' },
   { title: 'Gemini', url: 'https://gemini.google.com' },
-  { title: 'Claude', url: 'https://claude.ai' },
 ];
 
 if (typeof chrome !== 'undefined' && chrome.topSites) {
