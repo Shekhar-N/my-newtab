@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Home Tab</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;600&family=DM+Serif+Display:ital@0;1&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="newtab.css" />
+</head>
+<body>
+  <!-- Background -->
+  <div class="bg-layer"></div>
+  <div class="bg-overlay"></div>
+
+  <!-- LEFT: Bookmarks Panel -->
+  <aside class="bookmarks-panel" id="bookmarksPanel">
+    <div class="bookmarks-header" id="bookmarksToggle">
+      <svg class="bm-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z"/></svg>
+      <span>Bookmarks</span>
+      <svg class="chevron" id="bookmarksChevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+    </div>
+    <div class="bookmarks-body" id="bookmarksBody">
+      <div class="bookmarks-tree" id="bookmarksTree">
+        <div class="bm-loading">Loading bookmarks…</div>
+      </div>
+    </div>
+  </aside>
+
+  <!-- CENTER: Main Content -->
+  <main class="main-content">
+
+    <!-- Greeting -->
+    <div class="greeting" id="greeting">Good morning</div>
+
+    <!-- Search Bar -->
+    <div class="search-wrap">
+      <form class="search-form" action="https://www.google.com/search" method="GET" target="_self">
+        <div class="search-box">
+          <svg class="search-g-logo" viewBox="0 0 48 48">
+            <path fill="#4285F4" d="M44.5 20H24v8.5h11.8C34.7 33.9 30.1 37 24 37c-7.2 0-13-5.8-13-13s5.8-13 13-13c3.1 0 5.9 1.1 8.1 2.9l6.4-6.4C34.6 4.1 29.6 2 24 2 11.8 2 2 11.8 2 24s9.8 22 22 22c11 0 21-8 21-22 0-1.3-.2-2.7-.5-4z"/>
+            <path fill="#34A853" d="M6.3 14.7l7 5.1C15.1 16.1 19.2 13 24 13c3.1 0 5.9 1.1 8.1 2.9l6.4-6.4C34.6 4.1 29.6 2 24 2 16.3 2 9.7 7.4 6.3 14.7z"/>
+            <path fill="#FBBC05" d="M24 46c5.9 0 10.9-2 14.5-5.3l-6.7-5.5C29.8 36.8 27 38 24 38c-6.1 0-11.3-4.1-13-9.7l-7 5.4C7.4 41.9 15.1 46 24 46z"/>
+            <path fill="#EA4335" d="M44.5 20H24v8.5h11.8c-.9 2.6-2.6 4.8-4.8 6.2l6.7 5.5C41.8 37.2 45 31.1 45 24c0-1.3-.2-2.7-.5-4z"/>
+          </svg>
+          <input
+            type="text"
+            name="q"
+            class="search-input"
+            id="searchInput"
+            placeholder="Search with Google"
+            autocomplete="off"
+            autofocus
+          />
+          <button type="submit" class="search-btn" aria-label="Search">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+          </button>
+        </div>
+      </form>
+    </div>
+
+    <!-- Most Visited -->
+    <section class="sites-section">
+      <h2 class="section-label">Most Visited</h2>
+      <div class="sites-grid" id="sitesGrid">
+        <!-- Populated by JS -->
+      </div>
+    </section>
+
+  </main>
+
+  <!-- RIGHT: Clock Widget -->
+  <aside class="clock-panel">
+    <div class="clock-widget">
+      <div class="clock-time" id="clockTime">--:--</div>
+      <div class="clock-ampm" id="clockAmpm">AM</div>
+      <div class="clock-date" id="clockDate">Loading…</div>
+      <div class="clock-location" id="clockLocation">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+        <span id="locationText">Detecting…</span>
+      </div>
+    </div>
+  </aside>
+
+  <script src="newtab.js"></script>
+</body>
+</html>
