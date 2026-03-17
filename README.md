@@ -2,6 +2,9 @@
 
 A custom browser extension that provides a personalized new tab page experience.
 
+<img width="1919" height="1073" alt="image" src="https://github.com/user-attachments/assets/739ee9a3-a7ee-4f12-a529-8596d6f2435a" />
+
+
 ## Features
 
 - Custom new tab page design
